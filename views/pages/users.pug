@@ -1,0 +1,13 @@
+html
+	head
+		title Users
+
+body
+	include ../partials/header
+	each user in status
+		a(href='/users/'+user._id) #{user.username}
+		br
+		
+		
+		
+		

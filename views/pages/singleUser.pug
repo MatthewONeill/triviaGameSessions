@@ -1,0 +1,22 @@
+html
+	head
+		Title User Page
+		
+body
+	include ../partials/header
+	p Username: #{status.username}
+	p Total Quizzes: #{status.total_quizzes}
+	p Average Score: #{status.total_score/status.total_quizzes}
+	
+	p Change Privacy:
+	form(method='POST' action='/save')
+		input(type="radio", name="privacy", value="true", checked=privacy=="true")
+		| True
+		input(type="radio", name="privacy", value="false", checked=privacy=="false")
+		| False
+		button.btn.btn-primary(type='save') Save
+	
+	form(method='GET' action='/logout')
+		button.btn.btn-primary(type='logout') Log-Out
+	
+	

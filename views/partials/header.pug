@@ -1,0 +1,13 @@
+div#header
+	a(href="/") Home
+	| 
+	a(href="/quiz") New Quiz
+	| 
+	a(href="/users") Users
+	| 
+	if(status.loggedin == 1)
+		a(href="/users/"+status.tempid) Profile
+	
+	if(status.loggedin == 0)
+		a(href="/login") Log In
+		
